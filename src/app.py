@@ -103,8 +103,7 @@ class PyQtWindow(QMainWindow):
         self.show()
         self.initialize()
 
-        # function changes button color of the pressed button based on user input
-
+    # function changes button color of the pressed button based on user input
     def buttonPressed(self, button):
         if self.EditColorBox.currentText() == "Clear Color":
             button.setStyleSheet('background-color: white')

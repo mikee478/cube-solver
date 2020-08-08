@@ -1,5 +1,5 @@
-# cube-solver
-Rubik's cube 3D simulation solver.
+# Cube Solver
+Rubik's cube 3D simulation solver developed in 24 hours during SBUHacks 2019!
 
 ## How to use
 <p align="center">
@@ -18,3 +18,8 @@ Rubik's cube 3D simulation solver.
 </p>
 
 7. Now watch the 3D solver solve the cube!
+
+## Developers
+* Jihu Mun
+* Samuel Van der Sloot
+* Michael Wolf-Sonkin

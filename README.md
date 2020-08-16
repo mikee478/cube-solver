@@ -1,5 +1,5 @@
 # Cube Solver
-Rubik's cube 3D simulation solver developed in 24 hours during SBUHacks 2019!
+Virtual Rubik's Cube solver developed in 24 hours during SBUHacks 2019!
 
 ## How to use
 <p align="center">
@@ -20,6 +20,6 @@ Rubik's cube 3D simulation solver developed in 24 hours during SBUHacks 2019!
 7. Now watch the 3D solver solve the cube!
 
 ## Developers
-* Jihu Mun
-* Samuel Van der Sloot
-* Michael Wolf-Sonkin
+- **Jihu Mun** - [Github](https://github.com/altronis)
+- **Samuel Van der Sloot** - [Github](https://github.com/samjpv)
+- **Michael Wolf-Sonkin** - [Github](https://www.github.com/mikee478)

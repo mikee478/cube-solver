@@ -1,5 +1,7 @@
 # Cube Solver
-Virtual Rubik's Cube solver developed in 24 hours during SBUHacks 2019!
+Virtual Rubik's Cube solver developed in 24 hours during SBUHacks 2019! 
+
+**Averages 90 moves to solve!**
 
 ## How to use
 <p align="center">

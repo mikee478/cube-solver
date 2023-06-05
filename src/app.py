@@ -1,5 +1,5 @@
-from PyQt5 import uic
-from PyQt5.QtWidgets import (QApplication, QGridLayout, QMainWindow, QScrollArea, QWidget)
+from PyQt6 import uic
+from PyQt6.QtWidgets import (QApplication, QGridLayout, QMainWindow, QScrollArea, QWidget)
 from CubeRenderer import CubeRenderer
 import sys
 from cube_driver import *
@@ -106,7 +106,7 @@ class PyQtWindow(QMainWindow):
     # function changes button color of the pressed button based on user input
     def buttonPressed(self, button):
         if self.EditColorBox.currentText() == "Clear Color":
-            button.setStyleSheet('background-color: white')
+            button.setStyleSheet('background-color: none')
         else:
             if self.colorBox.currentText() == "Red":
                 button.setStyleSheet('background-color: red')
@@ -269,7 +269,7 @@ class PyQtWindow(QMainWindow):
         solution += solve_EP_1(cube)
         # print(stringify(solution))
         solution += solve_EP_2(cube)
-        print(stringify(solution))
+        print(f'Solution:\n{stringify(solution)}\n')
 
         # run the renderer script
         centralWidget = QWidget()
@@ -300,6 +300,7 @@ class PyQtWindow(QMainWindow):
             move = random.choice(moves)
             exec("list_of_moves.append(cube.%s)" % move)
 
+        print(f'Scramble:\n{stringify(list_of_moves)}\n')
         cube.apply_list_of_moves(list_of_moves)
         self.execute(cube, to_matrix(cube))
 
@@ -307,4 +308,4 @@ if __name__ == '__main__':
     app = QApplication([])
     mainWin = PyQtWindow()
     mainWin.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())

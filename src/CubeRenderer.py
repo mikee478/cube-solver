@@ -1,8 +1,7 @@
-from PyQt5.QtCore import Qt, QTimer
-from PyQt5.QtWidgets import QOpenGLWidget
+from PyQt6.QtCore import Qt, QTimer
+from PyQt6.QtOpenGLWidgets import QOpenGLWidget
 import OpenGL.GL as gl
 import math
-
 
 class CubeRenderer(QOpenGLWidget):
 
@@ -201,10 +200,10 @@ class CubeRenderer(QOpenGLWidget):
 
 	# Callback function for mouse moved
 	def mouseMoveEvent(self, event):
-		dx = event.x() - self.lastPos.x()
-		dy = event.y() - self.lastPos.y()
+		dx = event.pos().x() - self.lastPos.x()
+		dy = event.pos().y() - self.lastPos.y()
 		self.lastPos = event.pos()
-		if event.buttons() & Qt.LeftButton:
+		if event.buttons() == Qt.MouseButton.LeftButton:
 			self.setXRotation(self.xRot + 8 * dy)
 			self.setYRotation(self.yRot + 8 * dx)
 

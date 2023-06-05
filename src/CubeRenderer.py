@@ -2,6 +2,7 @@ from PyQt6.QtCore import Qt, QTimer
 from PyQt6.QtOpenGLWidgets import QOpenGLWidget
 import OpenGL.GL as gl
 import math
+from time import time
 
 class CubeRenderer(QOpenGLWidget):
 
@@ -28,7 +29,7 @@ class CubeRenderer(QOpenGLWidget):
 		self.stickers = stickers
 
 		# Looks better when look from an angle
-		self.xRot = 400
+		self.xRot = 550
 		self.yRot = 675
 		self.zRot = 0
 
@@ -52,6 +53,9 @@ class CubeRenderer(QOpenGLWidget):
 				self.cubeRot[x].append([0]*3)
 
 		self.cubeColors = self.initCubeColors(stickers)
+
+		self.waitSecs = 1.0
+		self.startTime = time()
 
 		timer = QTimer(self) # set up a timer
 		timer.timeout.connect(self.updatePosition) # timer callback function
@@ -164,7 +168,7 @@ class CubeRenderer(QOpenGLWidget):
 					self.cubes[x+1][y+1][z+1] = self.makeCube(x*1.1, y*1.1, z*1.1, 0.5, self.cubeColors[x+1][y+1][z+1])
 		gl.glEnable(gl.GL_NORMALIZE)
 		gl.glEnable(gl.GL_DEPTH_TEST);
-		gl.glClearColor(0.5, 0.5, 0.5, 1.0)
+		gl.glClearColor(190/255,220/255,245/255, 1.0)
 
 	# This function is called whenever the widget needs to be painted.
 	def paintGL(self):
@@ -330,6 +334,11 @@ class CubeRenderer(QOpenGLWidget):
 		# currentMove = -2 : Making the new cube after the swaps
 		# currentMove = -1 : Queueing up next move 
 		# currentMove >= 0 : Executing a move
+
+		# delay before starting solve
+		if time() - self.startTime < self.waitSecs:
+			self.update()
+			return
 
 		if self.currentMove == -2:
 			self.cubeColors = self.initCubeColors(self.stickers)

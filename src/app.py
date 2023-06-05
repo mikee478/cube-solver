@@ -11,8 +11,10 @@ class PyQtWindow(QMainWindow):
         super().__init__()
 
         self.title = 'Cube Solver'
-        
+
         uic.loadUi("CubeConfigLayout.ui", self)
+
+        self.setFixedSize(self.size())
 
         # dropdown options for color combo
         self.title = 'Cube Solver'
@@ -127,7 +129,7 @@ class PyQtWindow(QMainWindow):
         self.L01.setStyleSheet('background-color: none')
         self.L02.setStyleSheet('background-color: none')
         self.L10.setStyleSheet('background-color: none')
-        self.L11.setStyleSheet('background-color: orange')
+        self.L11.setStyleSheet('background-color: orange; color: black;')
         self.L12.setStyleSheet('background-color: none')
         self.L20.setStyleSheet('background-color: none')
         self.L21.setStyleSheet('background-color: none')
@@ -137,7 +139,7 @@ class PyQtWindow(QMainWindow):
         self.U01.setStyleSheet('background-color: none')
         self.U02.setStyleSheet('background-color: none')
         self.U10.setStyleSheet('background-color: none')
-        self.U11.setStyleSheet('background-color: white')
+        self.U11.setStyleSheet('background-color: white; color: black;')
         self.U12.setStyleSheet('background-color: none')
         self.U20.setStyleSheet('background-color: none')
         self.U21.setStyleSheet('background-color: none')
@@ -147,7 +149,7 @@ class PyQtWindow(QMainWindow):
         self.R01.setStyleSheet('background-color: none')
         self.R02.setStyleSheet('background-color: none')
         self.R10.setStyleSheet('background-color: none')
-        self.R11.setStyleSheet('background-color: red')
+        self.R11.setStyleSheet('background-color: red; color: black;')
         self.R12.setStyleSheet('background-color: none')
         self.R20.setStyleSheet('background-color: none')
         self.R21.setStyleSheet('background-color: none')
@@ -157,7 +159,7 @@ class PyQtWindow(QMainWindow):
         self.D01.setStyleSheet('background-color: none')
         self.D02.setStyleSheet('background-color: none')
         self.D10.setStyleSheet('background-color: none')
-        self.D11.setStyleSheet('background-color: yellow')
+        self.D11.setStyleSheet('background-color: yellow; color: black;')
         self.D12.setStyleSheet('background-color: none')
         self.D20.setStyleSheet('background-color: none')
         self.D21.setStyleSheet('background-color: none')
@@ -167,7 +169,7 @@ class PyQtWindow(QMainWindow):
         self.B01.setStyleSheet('background-color: none')
         self.B02.setStyleSheet('background-color: none')
         self.B10.setStyleSheet('background-color: none')
-        self.B11.setStyleSheet('background-color: blue')
+        self.B11.setStyleSheet('background-color: blue; color: black;')
         self.B12.setStyleSheet('background-color: none')
         self.B20.setStyleSheet('background-color: none')
         self.B21.setStyleSheet('background-color: none')
@@ -177,7 +179,7 @@ class PyQtWindow(QMainWindow):
         self.F01.setStyleSheet('background-color: none')
         self.F02.setStyleSheet('background-color: none')
         self.F10.setStyleSheet('background-color: none')
-        self.F11.setStyleSheet('background-color: green')
+        self.F11.setStyleSheet('background-color: green; color: black;')
         self.F12.setStyleSheet('background-color: none')
         self.F20.setStyleSheet('background-color: none')
         self.F21.setStyleSheet('background-color: none')

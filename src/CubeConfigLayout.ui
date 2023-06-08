@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>791</width>
-    <height>671</height>
+    <width>725</width>
+    <height>725</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>20</x>
       <y>30</y>
       <width>691</width>
       <height>491</height>
@@ -1088,8 +1088,8 @@
    <widget class="QComboBox" name="colorBox">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>570</y>
+      <x>20</x>
+      <y>580</y>
       <width>111</width>
       <height>41</height>
      </rect>
@@ -1098,8 +1098,8 @@
    <widget class="QComboBox" name="EditColorBox">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>570</y>
+      <x>130</x>
+      <y>580</y>
       <width>121</width>
       <height>41</height>
      </rect>
@@ -1108,8 +1108,8 @@
    <widget class="QPushButton" name="clearButton">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>570</y>
+      <x>260</x>
+      <y>580</y>
       <width>111</width>
       <height>41</height>
      </rect>
@@ -1121,8 +1121,8 @@
    <widget class="QPushButton" name="submitButton">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>570</y>
+      <x>520</x>
+      <y>580</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -1134,8 +1134,8 @@
    <widget class="QPushButton" name="randomButton">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>570</y>
+      <x>380</x>
+      <y>580</y>
       <width>131</width>
       <height>41</height>
      </rect>
